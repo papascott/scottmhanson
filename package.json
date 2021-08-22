@@ -1,8 +1,10 @@
 {
   "name": "scottmhanson",
-  "version" : "1.0.0",
+  "version": "1.0.0",
   "bin": {
     "scottmhanson": "index.js"
+  },
+  "dependencies": {
+    "clear-any-console": "^1.16.2"
   }
-
 }
