@@ -12,5 +12,13 @@
     "scott hanson",
     "scott",
     "hanson"
-  ]
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "papascott/scottmhanson",
+  "author": {
+    "name": "Scott Hanson",
+    "email": "papascott@gmail.com",
+    "url": "https://twitter.com/ScottHansonDE"
+  }
 }
