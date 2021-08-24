@@ -1,23 +1,31 @@
 #!/usr/bin/env node
-
 const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome')
+const chalk = require('chalk')
+const log = console.log
+const dim = chalk.dim
+const italic = chalk.italic
+const twitterColor = chalk.hex(`#1da1f2`).bold.inverse;
+const githubColor = chalk.hex(`#6cc644`).bold.inverse;
+
 
 welcome({
-  title: pkgJSON.name,
+  title: 'Scott Hanson',
   tagLine: 'Howdy, nice meet to you!',
   description: pkgJSON.description,
   version: pkgJSON.version,
-  bgColor: `#FADC00`,
+  bgColor: `#6937ff`,
   color: `#000000`,
   bold: true,
   clear: true,
 });
 
-console.log(`
-Scott Hanson
+log(`
+${italic(`This is my description.`)}
 
-Twitter: https://twitter.com/ScottHansonDE
-GitHub: https://github.com/papascott
+${twitterColor(` Twitter `)} ${dim(`https://twitter.com/ScottHansonDE`)}
+${githubColor(` GitHub `)} ${dim(
+  `https://github.com/papascott`
+)}
 
-`)
+`);
