@@ -4,6 +4,7 @@ const welcome = require('cli-welcome')
 const chalk = require('chalk')
 const alert = require('cli-alerts')
 const checkNode = require('cli-check-node')
+const unhandled = require('cli-handle-unhandled')
 
 const log = console.log
 const dim = chalk.dim
@@ -11,6 +12,7 @@ const italic = chalk.italic
 const twitterColor = chalk.hex(`#1da1f2`).bold.inverse;
 const githubColor = chalk.hex(`#6cc644`).bold.inverse;
 
+unhandled()
 checkNode('12')
 
 welcome({
