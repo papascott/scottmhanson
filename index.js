@@ -3,18 +3,15 @@ const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome')
 const chalk = require('chalk')
 const alert = require('cli-alerts')
+const checkNode = require('cli-check-node')
+
 const log = console.log
 const dim = chalk.dim
 const italic = chalk.italic
 const twitterColor = chalk.hex(`#1da1f2`).bold.inverse;
 const githubColor = chalk.hex(`#6cc644`).bold.inverse;
 
-// Alerts
-const sym = require('log-symbols')
-const success = chalk.green.inverse
-const info = chalk.blue.inverse
-const warning = chalk.keyword(`orange`).inverse
-const error = chalk.red.bold.inverse
+checkNode('12')
 
 welcome({
   title: 'Scott Hanson',
