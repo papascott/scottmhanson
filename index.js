@@ -2,6 +2,7 @@
 const pkgJSON = require('./package.json');
 const welcome = require('cli-welcome')
 const chalk = require('chalk')
+const alert = require('cli-alerts')
 const log = console.log
 const dim = chalk.dim
 const italic = chalk.italic
@@ -36,9 +37,4 @@ ${githubColor(` GitHub `)} ${dim(
 
 `);
 
-log(`
-${sym.success} ${success(` SUCCESS `)} Thanks for checking out my CLI.
-${sym.info} ${info(` INFO `)} I'm creating a course.
-${sym.warning} ${warning(` WARNING `)} Please don't copy me.
-${sym.error} ${error(` ERROR `)} I'm on vacation.
-`)
+alert({type: 'info', msg: 'Check out my work!'})
