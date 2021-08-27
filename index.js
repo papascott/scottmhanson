@@ -8,6 +8,12 @@ const italic = chalk.italic
 const twitterColor = chalk.hex(`#1da1f2`).bold.inverse;
 const githubColor = chalk.hex(`#6cc644`).bold.inverse;
 
+// Alerts
+const sym = require('log-symbols')
+const success = chalk.green.inverse
+const info = chalk.blue.inverse
+const warning = chalk.keyword(`orange`).inverse
+const error = chalk.red.bold.inverse
 
 welcome({
   title: 'Scott Hanson',
@@ -29,3 +35,10 @@ ${githubColor(` GitHub `)} ${dim(
 )}
 
 `);
+
+log(`
+${sym.success} ${success(` SUCCESS `)} Thanks for checking out my CLI.
+${sym.info} ${info(` INFO `)} I'm creating a course.
+${sym.warning} ${warning(` WARNING `)} Please don't copy me.
+${sym.error} ${error(` ERROR `)} I'm on vacation.
+`)
